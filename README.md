@@ -16,5 +16,5 @@ new project setup with AngularJS and webpack.
         -  In terminal enter command - git remote -v
 ##### Verify new remote URL
 
-         - origin  https://github.com/USERNAME/OTHERREPOSITORY.git (fetch)
-         - origin  https://github.com/USERNAME/OTHERREPOSITORY.git (push)
+         - origin  https://github.com/USERNAME/newProject.git (fetch)
+         - origin  https://github.com/USERNAME/newProject.git (push)
