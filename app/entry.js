@@ -1,5 +1,5 @@
 'use strict';
- require("!style!css!./style.css");
+
 require('./scss/main.scss');
 
 const path = require('path');
@@ -12,7 +12,7 @@ const ngAnimate = require('angular-animate');
 const ngDialog = require('ng-dialog');
 const uiBootstrap = require('angular-ui-bootstrap');
 
-const app = angular.module('gmailListView', [uiRouter, ngFileUpload, ngAnimate, ngDialog, uiBootstrap]);
+const app = angular.module('startApp', [uiRouter, ngFileUpload, ngAnimate, ngDialog, uiBootstrap]);
 
 let context = require.context('./config/', true, /\.js$/);
 context.keys().forEach( path => {
@@ -22,7 +22,6 @@ context.keys().forEach( path => {
 context = require.context('./view/', true, /\.js$/);
 context.keys().forEach( key => {
   let name = pascalcase(path.basename(key, '.js'));
-  console.log('name--- ', name);
   app.controller(name, context(key));
 });
 
