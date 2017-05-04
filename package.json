@@ -7,6 +7,7 @@
     },
     "main": "entry.js",
     "scripts": {
+        "uninstallAllDependency": "ls .\node_modules | % {npm uninstall $_}",
         "kill": "taskkill /f /im node.exe",
         "start": "node server.js",
         "heroku-postbuild": "webpack -p --progress",
